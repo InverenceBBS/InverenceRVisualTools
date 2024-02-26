@@ -72,7 +72,7 @@ DTSimple = function(
   df,
   dom=getOption("InvenceRVisualTools.DT.dom"),
   buttons=getOption("InvenceRVisualTools.DT.buttons"),
-  minPageLength=getOption("DT.minPageLength"),
+  minPageLength=getOption("InvenceRVisualTools.DT.minPageLength"),
   extensions='Buttons',
   opt_class = "display nowrap",
   selection = 'single',
