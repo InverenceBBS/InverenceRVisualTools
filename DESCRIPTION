@@ -1,10 +1,19 @@
-Package: InvRvisualtools
+Package: InvenceRVisualTools
 Type: Package
 Title: Visualizing and Report Tools
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Víctor de Buen Remiro <victor.debuen@inverence.com>
+Authors@R: person("Víctor", "de Buen", email = "victor.debuen@inverence.com", 
+  role = c("aut", "cre"))
 Description: Visualizing and report tools as tables, charts, etc
-License: unknown
+License: `use_gpl3_license()`
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
 LazyData: true
+Imports:
+    DT,
+    plotly
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

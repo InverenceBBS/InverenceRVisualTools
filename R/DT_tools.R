@@ -4,10 +4,6 @@
 #############################################################################################
 
 require(DT)
-options(DT.pageLength=10)
-options(DT.digits=5)
-options(DT.fontSize='85%')
-options(DT.fontType='monospace')
 #options(DT.fillContainer=NULL)
 
 #############################################################################
@@ -18,15 +14,14 @@ options(DT.fontType='monospace')
 #' @param df A data.frame to be shown
 #'
 #' @return A list of DT options.
-#' @export
 #'
 #' @examples
-#' DTFitOptions(df)
-DTFitOptions = function(df,
-  dom='Blfrtip',
-  buttons= c('copy'),
+#' .DTFitOptions(df)
+.DTFitOptions = function(df,
+  dom=getOption("InvenceRVisualTools.DT.dom"),
+  buttons= getOption("InvenceRVisualTools.DT.buttons"),
+  minPageLength=getOption("InvenceRVisualTools.DT.minPageLength"),
   hideColNames=NULL,
-  minPageLength=5,
   useRegExp=FALSE,
   autoWidth=TRUE,
   columnDefs=NULL,
@@ -75,13 +70,14 @@ DTFitOptions = function(df,
 #' DTSimple(df)
 DTSimple = function(
   df,
-  dom='Blfrtip',
-  buttons= c('colvis', 'copy', 'excel'),
+  dom=getOption("InvenceRVisualTools.DT.dom"),
+  buttons=getOption("InvenceRVisualTools.DT.buttons"),
+  minPageLength=getOption("DT.minPageLength"),
   extensions='Buttons',
   opt_class = "display nowrap",
   selection = 'single',
-  filter="none", rownames=FALSE,
-  minPageLength=5,
+  filter="none",
+  rownames=FALSE,
   hideColNames=NULL,
   width=NULL,
   height=NULL,
@@ -98,7 +94,7 @@ DTSimple = function(
     df,
     options=c(
       options,
-      DTFitOptions(
+      .DTFitOptions(
         df,
         dom=dom,
         buttons=buttons,
