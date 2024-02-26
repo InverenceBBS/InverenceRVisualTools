@@ -1,0 +1,10 @@
+Package: InvRvisualtools
+Type: Package
+Title: Visualizing and Report Tools
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: Víctor de Buen Remiro <victor.debuen@inverence.com>
+Description: Visualizing and report tools as tables, charts, etc
+License: unknown
+Encoding: UTF-8
+LazyData: true
